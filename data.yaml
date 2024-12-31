@@ -1,0 +1,13 @@
+train: ./data/train/images
+val: ./data/valid/images
+test: ./data/test/images
+
+nc: 1
+names: ["license"]
+
+roboflow:
+  workspace: mashinelearning
+  project: licence-plate-detection-wcfzj
+  version: 9
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/mashinelearning/licence-plate-detection-wcfzj/dataset/9
