@@ -37,8 +37,8 @@ While license plate recognition is a well-researched area, existing solutions fo
 [Licence Plate Detection Computer Vision dataset](https://universe.roboflow.com/mashinelearning/licence-plate-detection-wcfzj/dataset/9)
 
 ## Results
-- The model achieved a mean average precision (mAP) of 0.78 after 200 epochs.
-- Successfully detected and blurred license plates with confidence levels ranging from 50% to 86%.
+- The model achieved a mean average precision (mAP) of **0.78** after 200 epochs.
+- Successfully detected and blurred license plates with confidence levels ranging from **50%** to **86%**.
 
 ## Requirements
 - **Hardware**: NVIDIA T4 GPU or equivalent.
