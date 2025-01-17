@@ -8,8 +8,47 @@ This project focuses on capturing and blurring vehicle number plates in real tim
 - Configured for custom datasets to achieve optimal performance.
 - Capable of processing images and videos in real time.
 
-## State of the Art
-While license plate recognition is a well-researched area, existing solutions focus primarily on extracting textual information rather than blurring plates. This project uniquely addresses privacy concerns by blurring license plates in real time.
+## How to Use
+
+1. **Clone the Repository**  
+   ```bash
+   git clone https://github.com/Vijay-Reddy-Pininti/Realtime-Number-Plate-Blurring.git
+   cd Realtime-Number-Plate-Blurring
+   ```
+   
+2. **Download the dataset** </br>
+- Download the dataset from this link: [Licence Plate Detection Computer Vision dataset](https://universe.roboflow.com/mashinelearning/licence-plate-detection-wcfzj/dataset/9).
+- Extract the downloaded file and copy the **test, train** and **valid** folders into the **Realtime-Number-Plate-Blurring** folder.
+
+
+3. **Download the pre-trained weights**
+
+- Download the pre-trained weights (yolov9-e.pt) from this link: [Weights](https://github.com/WongKinYiu/yolov9/releases/tag/v0.1).
+- Copy the weights into the **Realtime-Number-Plate-Blurring** folder.
+
+4. **Training the model**
+
+- Run the file **train_dataset.ipynb**.
+- Adjust the epochs if required for your dataset.
+
+5. **Blur License Plates in Image**
+
+```bash
+python blur_number_plate_in_image.py --img_path <your_image>
+```
+
+6. **Blur License Plates in Video**
+
+```bash
+python blur_number_plate_in_video.py --input_path <video_to_blur> --output_path <output_destination>
+```
+
+7. **Blur License Plates in Realtime**
+
+```bash
+python blur_number_plate_in_webcam.py
+Press "ctrl + c" once you are done.
+```
 
 ## Inputs and Outputs
 - **Inputs**: Images or videos containing vehicle license plates.
@@ -56,50 +95,7 @@ While license plate recognition is a well-researched area, existing solutions fo
 
 ## Lessons Learned
 - The importance of a high-quality, diverse dataset for robust model performance.
-- The strengths of YOLOv9 in real-time object detection.
-
-## How to Use
-
-1. **Clone the Repository**  
-   ```bash
-   git clone https://github.com/Vijay-Reddy-Pininti/Realtime-Number-Plate-Blurring.git
-   cd Realtime-Number-Plate-Blurring
-   ```
-   
-2. **Download the dataset** </br>
-- Download the dataset from this link: [Licence Plate Detection Computer Vision dataset](https://universe.roboflow.com/mashinelearning/licence-plate-detection-wcfzj/dataset/9).
-- Extract the downloaded file and copy the **test, train** and **valid** folders into the **Realtime-Number-Plate-Blurring** folder.
-
-
-3. **Download the pre-trained weights**
-
-- Download the pre-trained weights (yolov9-e.pt) from this link: [Weights](https://github.com/WongKinYiu/yolov9/releases/tag/v0.1).
-- Copy the weights into the **Realtime-Number-Plate-Blurring** folder.
-
-4. **Training the model**
-
-- Run the file **train_dataset.ipynb**.
-- Adjust the epochs if required for your dataset.
-
-5. **Blur License Plates in Image**
-
-```bash
-python blur_number_plate_in_image.py --img_path <your_image>
-```
-
-6. **Blur License Plates in Video**
-
-```bash
-python blur_number_plate_in_video.py --input_path <video_to_blur> --output_path <output_destination>
-```
-
-7. **Blur License Plates in Realtime**
-
-```bash
-python blur_number_plate_in_webcam.py
-Press "ctrl + c" once you are done.
-```
-    
+- The strengths of YOLOv9 in real-time object detection. 
 
 ## Video Demonstration
 Watch the video demonstration of the project on [YouTube](https://youtu.be/i53-ycDQwh8?si=Yk9nWd7VKUjslxx1).
